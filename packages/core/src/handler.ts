@@ -1,6 +1,6 @@
 import { ApiHandler } from "sst/node/api";
 
-export default function handler(lambda: any) {
+export default function handler(lambda: (event: any, context: any) => Promise<any>) {
   return ApiHandler(async (event, context) => {
     let body, statusCode;
 
