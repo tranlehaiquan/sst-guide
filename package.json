@@ -9,7 +9,8 @@
     "deploy": "sst deploy",
     "remove": "sst remove",
     "console": "sst console",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "sst bind vitest run"
   },
   "devDependencies": {
     "@tsconfig/node16": "^16.1.0",
@@ -26,6 +27,7 @@
     "@aws-sdk/lib-dynamodb": "^3.370.0",
     "@types/uuid": "^9.0.2",
     "stripe": "^12.16.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "vitest": "^0.33.0"
   }
 }
