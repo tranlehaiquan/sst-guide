@@ -15,7 +15,7 @@ const config = {
     IDENTITY_POOL_ID: import.meta.env.VITE_IDENTITY_POOL_ID,
   },
   MAX_ATTACHMENT_SIZE: 5000000,
-  STRIPE_KEY: "<YOUR_STRIPE_PUBLIC_KEY>",
+  STRIPE_KEY: "pk_test_51Ivc0PJ7WlU3GulhxSxtXneUNIlvYilZNmc3fbEMCQpSQMuyzrmX26H4LvvGCzEKbQRbNVxa4CIPIorosCl5cx8f00HNLlwWWO",
 };
 
 export default config;

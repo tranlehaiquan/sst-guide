@@ -53,7 +53,7 @@ export function BillingForm({ isLoading, onSubmit }: BillingFormType) {
   });
 
   return (
-    <Form className="BillingForm" onSubmit={handleSubmitClick}>
+    <Form className="BillingForm">
       <Form.Group controlId="storage">
         <Form.Label>Storage</Form.Label>
         <Form.Control
@@ -92,7 +92,7 @@ export function BillingForm({ isLoading, onSubmit }: BillingFormType) {
             }}
           />
         </div>
-        <Button disabled={$loading}>Purchase</Button>
+        <Button disabled={$loading} onClick={handleSubmitClick}>Purchase</Button>
       </Stack>
     </Form>
   );
