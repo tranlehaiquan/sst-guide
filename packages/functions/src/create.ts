@@ -20,7 +20,7 @@ export const main = handler(async (event: APIGatewayProxyEventV2WithIAMAuthorize
       userId: (event.requestContext.authorizer.iam.cognitoIdentity as CognitoIdentity).identityId,
       noteId: uuid.v1(), // A unique uuid
       content: data.content, // Parsed from request body
-      attachment: data.attachment, // Parsed from request body
+      attachment: data.attachment || '', // Parsed from request body
       createdAt: Date.now(), // Current Unix timestamp
     },
   };

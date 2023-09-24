@@ -15,7 +15,7 @@ export function ApiStack({ stack }: StackContext) {
       },
     },
     cors: {
-      allowMethods: ["GET"],
+      allowMethods: ["GET", "POST", "PUT", "DELETE"],
     },
     routes: {
       "POST /notes": "packages/functions/src/create.main",
