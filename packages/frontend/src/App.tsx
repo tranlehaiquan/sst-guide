@@ -2,9 +2,10 @@ import "./App.css";
 import Routes from "./Routes";
 import { Link, useNavigate } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import { Auth } from "aws-amplify";
 import { useAppContext } from "./libs/contextLib";
+import { LinkContainer } from "react-router-bootstrap";
+import Nav from "react-bootstrap/Nav";
 
 function App() {
   const nav = useNavigate();
@@ -23,9 +24,10 @@ function App() {
         {isAuthenticated ? (
           <>
             <Link to="/">Home</Link>
-            <Button onClick={handleLogout}>
-              Logout
-            </Button>
+            <LinkContainer to="/settings">
+              <Nav.Link>Settings</Nav.Link>
+            </LinkContainer>
+            <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
           </>
         ) : (
           <>
